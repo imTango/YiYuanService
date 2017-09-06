@@ -15,6 +15,7 @@
 		BFF8AF141F5F893500FBAB04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF8AF121F5F893500FBAB04 /* LaunchScreen.storyboard */; };
 		BFF8AF1F1F5F893500FBAB04 /* YiYuanServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF8AF1E1F5F893500FBAB04 /* YiYuanServiceTests.m */; };
 		BFF8AF2A1F5F893500FBAB04 /* YiYuanServiceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF8AF291F5F893500FBAB04 /* YiYuanServiceUITests.m */; };
+		BFF8AF3C1F5F8A8500FBAB04 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF8AF3B1F5F8A8500FBAB04 /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,10 @@
 		BFF8AF251F5F893500FBAB04 /* YiYuanServiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YiYuanServiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF8AF291F5F893500FBAB04 /* YiYuanServiceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YiYuanServiceUITests.m; sourceTree = "<group>"; };
 		BFF8AF2B1F5F893500FBAB04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFF8AF391F5F89D500FBAB04 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		BFF8AF3A1F5F8A8500FBAB04 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		BFF8AF3B1F5F8A8500FBAB04 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		BFF8AF3E1F5F8B6400FBAB04 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +110,14 @@
 				BFF8AF081F5F893500FBAB04 /* AppDelegate.m */,
 				BFF8AF0A1F5F893500FBAB04 /* ViewController.h */,
 				BFF8AF0B1F5F893500FBAB04 /* ViewController.m */,
+				BFF8AF3A1F5F8A8500FBAB04 /* TestViewController.h */,
+				BFF8AF3B1F5F8A8500FBAB04 /* TestViewController.m */,
+				BFF8AF3D1F5F8B6400FBAB04 /* PCH */,
 				BFF8AF0D1F5F893500FBAB04 /* Main.storyboard */,
 				BFF8AF101F5F893500FBAB04 /* Assets.xcassets */,
 				BFF8AF121F5F893500FBAB04 /* LaunchScreen.storyboard */,
 				BFF8AF151F5F893500FBAB04 /* Info.plist */,
+				BFF8AF391F5F89D500FBAB04 /* PrefixHeader.pch */,
 				BFF8AF041F5F893500FBAB04 /* Supporting Files */,
 			);
 			path = YiYuanService;
@@ -138,6 +147,14 @@
 				BFF8AF2B1F5F893500FBAB04 /* Info.plist */,
 			);
 			path = YiYuanServiceUITests;
+			sourceTree = "<group>";
+		};
+		BFF8AF3D1F5F8B6400FBAB04 /* PCH */ = {
+			isa = PBXGroup;
+			children = (
+				BFF8AF3E1F5F8B6400FBAB04 /* API.h */,
+			);
+			path = PCH;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +295,7 @@
 			files = (
 				BFF8AF0C1F5F893500FBAB04 /* ViewController.m in Sources */,
 				BFF8AF091F5F893500FBAB04 /* AppDelegate.m in Sources */,
+				BFF8AF3C1F5F8A8500FBAB04 /* TestViewController.m in Sources */,
 				BFF8AF061F5F893500FBAB04 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,10 +443,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = JFJYGYVL3B;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YiYuanService/PrefixHeader.pch";
 				INFOPLIST_FILE = YiYuanService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yyinfo.YiYuanService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yyinfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -437,10 +459,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = JFJYGYVL3B;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YiYuanService/PrefixHeader.pch";
 				INFOPLIST_FILE = YiYuanService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yyinfo.YiYuanService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yyinfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
